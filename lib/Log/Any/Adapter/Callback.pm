@@ -45,8 +45,9 @@ This adapter lets you specify callback subroutine to be called by Log::Any's
 logging methods (like $log->debug(), $log->error(), etc) and detection methods
 (like $log->is_warning(), $log->is_fatal(), etc.).
 
-This is mostly a convenient construct and saves a few lines of code, because so
-you don't have to create a full Log::Any adapter class.
+This adapter is used for customized logging, and is mostly a convenient
+construct to save a few lines of code. You could achieve the same effect by
+creating a full Log::Any adapter class.
 
 Your logging callback subroutine will be called with these arguments:
 
@@ -54,6 +55,8 @@ Your logging callback subroutine will be called with these arguments:
 
 where $method is the name of method (like "debug") and ($self, $format, @params)
 are given by Log::Any.
+
+=for Pod::Coverage init
 
 =head1 SEE ALSO
 
