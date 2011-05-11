@@ -33,9 +33,17 @@ __END__
 
 =head1 SYNOPSIS
 
+ # say, let's POST each log message to an HTTP API server
+ use LWP::UserAgent;
+ my $ua = LWP::UserAgent->new;
+
  use Log::Any::Adapter;
  Log::Any::Adapter->set('Callback',
-     logging_cb   => sub { ... },
+     logging_cb   => sub {
+         my ($method, $self, $format, @params) = @_;
+         $ua->post("https://localdomain/log", level=>$method, Content=>$format);
+         sleep 1; # don't overload the server
+     },
      detection_cb => sub { ... }, # optional, default is: sub { 1 }
  );
 
