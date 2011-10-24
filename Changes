@@ -1,5 +1,10 @@
 Revision history for Log-Any-Adapter-Callback
 
+0.03    2011-10-24
+
+        Only call callback if level suffices.
+
+
 0.02    2011-05-11
 
         No functional changes.
