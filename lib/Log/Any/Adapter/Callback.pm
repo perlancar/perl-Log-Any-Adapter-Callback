@@ -1,7 +1,6 @@
 package Log::Any::Adapter::Callback;
 # ABSTRACT: Send Log::Any logs to a subroutine
 
-use 5.010;
 use strict;
 use warnings;
 
@@ -34,7 +33,7 @@ sub init {
     } else {
         $detection_cb = sub { 1 };
     }
-    $self->{min_level} //= _default_level();
+    if (!defined($self->{min_level})) { $self->{min_level} = _default_level() }
 }
 
 for my $method (Log::Any->logging_methods()) {
