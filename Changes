@@ -1,5 +1,10 @@
 Revision history for Log-Any-Adapter-Callback
 
+0.04    2012-03-13
+
+        No functional changes. Support older Perl [RT #75719].
+
+
 0.03    2011-10-24
 
         Only call callback if level suffices.
