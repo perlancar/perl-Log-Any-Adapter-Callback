@@ -1,5 +1,11 @@
 Revision history for Log-Any-Adapter-Callback
 
+0.05     2013-09-09 (SHARYANTO)
+
+         - No functional changes. Rebuild with MakeMaker instead of
+           Module::Build because the latter is deprecated from core in 5.19.
+
+
 0.04    2012-03-13 (SHARYANTO)
 
         - No functional changes. Support older Perl [RT #75719].
