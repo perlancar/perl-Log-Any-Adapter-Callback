@@ -1,11 +1,12 @@
 package Log::Any::Adapter::Callback;
-# ABSTRACT: Send Log::Any logs to a subroutine
 
 use strict;
 use warnings;
 
 use Log::Any::Adapter::Util qw(make_method);
 use base qw(Log::Any::Adapter::Base);
+
+# VERSION
 
 my @logging_methods = Log::Any->logging_methods;
 my %logging_levels;
@@ -56,7 +57,9 @@ for my $method (Log::Any->detection_methods()) {
 }
 
 1;
-__END__
+# ABSTRACT: Send Log::Any logs to a subroutine
+
+=for Pod::Coverage init
 
 =head1 SYNOPSIS
 
@@ -75,6 +78,7 @@ __END__
      detection_cb => sub { ... }, # optional, default is: sub { 1 }
  );
 
+
 =head1 DESCRIPTION
 
 This adapter lets you specify callback subroutine to be called by Log::Any's
@@ -92,7 +96,6 @@ Your logging callback subroutine will be called with these arguments:
 where $method is the name of method (like "debug") and ($self, $format, @params)
 are given by Log::Any.
 
-=for Pod::Coverage init
 
 =head1 SEE ALSO
 
