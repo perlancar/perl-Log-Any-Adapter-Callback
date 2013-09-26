@@ -1,5 +1,12 @@
 Revision history for Log-Any-Adapter-Callback
 
+0.06     2013-09-26 (SHARYANTO)
+
+         - No functional changes. Add missing test dependency to Test::More 0.98
+           (pointed out by Clinton Gormley) (weird, lint-prereqs doesn't catch
+           this).
+
+
 0.05     2013-09-09 (SHARYANTO)
 
          - No functional changes. Rebuild with MakeMaker instead of
