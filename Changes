@@ -1,5 +1,10 @@
 Revision history for Log-Any-Adapter-Callback
 
+0.09    2014-03-16 (SHARYANTO)
+
+        - No functional changes. Remove perl 5.10 requirement by request [GH#3].
+
+
 0.08    2014-02-28 (SHARYANTO)
 
 	- No functional changes. Rebuild and depend on Log::Any::Adapter instead
