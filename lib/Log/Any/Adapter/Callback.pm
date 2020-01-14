@@ -60,7 +60,7 @@ for my $method (Log::Any->detection_methods()) {
 }
 
 1;
-# ABSTRACT: Send Log::Any logs to a subroutine
+# ABSTRACT: (DEPRECATED) Send Log::Any logs to a subroutine
 
 =for Pod::Coverage init
 
