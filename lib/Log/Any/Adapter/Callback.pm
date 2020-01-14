@@ -1,12 +1,15 @@
 package Log::Any::Adapter::Callback;
 
+# AUTHORITY
+# DATE
+# DIST
+# VERSION
+
 use strict;
 use warnings;
 
 use Log::Any::Adapter::Util qw(make_method);
 use base qw(Log::Any::Adapter::Base);
-
-# VERSION
 
 my @logging_methods = Log::Any->logging_methods;
 my %logging_levels;
@@ -81,7 +84,11 @@ for my $method (Log::Any->detection_methods()) {
 
 =head1 DESCRIPTION
 
-This adapter lets you specify callback subroutine to be called by Log::Any's
+DEPRECATION NOTICE: Log::Any distribution since 1.708 comes with
+L<Log::Any::Adapter::Capture> which does the same thing. I'm deprecating this
+adapter now.
+
+This adapter lets you specify callback subroutine to be called by L<Log::Any>'s
 logging methods (like $log->debug(), $log->error(), etc) and detection methods
 (like $log->is_warning(), $log->is_fatal(), etc.).
 
@@ -98,5 +105,7 @@ are given by Log::Any.
 
 
 =head1 SEE ALSO
+
+L<Log::Any::Adapter::Capture>
 
 L<Log::Any>

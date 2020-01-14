@@ -1,3 +1,10 @@
+0.100   2020-01-14  Released-By: PERLANCAR; Urgency: medium
+
+        - No functional changes.
+
+        - Mark deprecated, in favor of Log::Any::Adapter::Capture.
+
+
 0.09    2014-03-16  Released-By: SHARYANTO
 
         - No functional changes. Remove perl 5.10 requirement by request [GH#3].
