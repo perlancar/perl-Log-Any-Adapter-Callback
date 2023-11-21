@@ -1,15 +1,15 @@
 package Log::Any::Adapter::Callback;
 
-# AUTHORITY
-# DATE
-# DIST
-# VERSION
-
 use strict;
 use warnings;
 
 use Log::Any::Adapter::Util qw(make_method);
 use base qw(Log::Any::Adapter::Base);
+
+# AUTHORITY
+# DATE
+# DIST
+# VERSION
 
 my @logging_methods = Log::Any->logging_methods;
 my %logging_levels;
